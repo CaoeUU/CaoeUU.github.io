@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Caoe Daisy</title>
-    <link>https://example.org/posts/</link>
+    <link>https://xiaocao.me/posts/</link>
     <description>Recent content in Posts on Caoe Daisy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Feb 2024 14:36:04 +0800</lastBuildDate>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xiaocao.me/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Loading</title>
-      <link>https://example.org/posts/loading/</link>
+      <link>https://xiaocao.me/posts/loading/</link>
       <pubDate>Sat, 03 Feb 2024 14:36:04 +0800</pubDate>
-      <guid>https://example.org/posts/loading/</guid>
+      <guid>https://xiaocao.me/posts/loading/</guid>
       <description>Contents Loading&amp;hellip;&amp;hellip;(0/100) </description>
     </item>
   </channel>
