@@ -1,0 +1,4 @@
+baseURL = 'https://xiaocao.me/'
+languageCode = 'en-us'
+title = 'Caoe Daisy'
+theme = 'tranquilpeak'
