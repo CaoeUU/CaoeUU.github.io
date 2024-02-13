@@ -44,4 +44,4 @@ theme = 'tranquilpeak'
   thumbnailImage = true
   thumbnailImagePosition = "right"
   autoThumbnailImage = true
-  coverImage = "images/background.jpg"
+  coverImage = "images/background1.jpg"
