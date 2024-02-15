@@ -36,7 +36,7 @@ theme = 'tranquilpeak'
   name = "Xiaocao You"
   bio = "A Junior Student Majored in Statistics in Shanghai University of Finance and Economics"
   location = "Shanghai, China"
-  picture = "public/images/avatar.jpg"
+  picture = "images/caosmile.jpg"
 
 ### Customization
 [params]
@@ -44,4 +44,4 @@ theme = 'tranquilpeak'
   thumbnailImage = true
   thumbnailImagePosition = "right"
   autoThumbnailImage = true
-  coverImage = "images/background1.jpg"
+  coverImage = "images/background.jpg"
