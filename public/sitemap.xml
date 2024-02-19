@@ -2,20 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://xiaocao.me/</loc>
+    <lastmod>2024-02-03T14:36:04+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaocao.me/posts/loading/</loc>
+    <lastmod>2024-02-03T14:36:04+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaocao.me/posts/</loc>
+    <lastmod>2024-02-03T14:36:04+08:00</lastmod>
+  </url><url>
     <loc>https://xiaocao.me/categories/</loc>
-    <lastmod>2024-02-19T19:03:10+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaocao.me/categories/category/</loc>
-    <lastmod>2024-02-19T19:03:10+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaocao.me/categories/subcategory/</loc>
-    <lastmod>2024-02-19T19:03:10+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaocao.me/</loc>
-    <lastmod>2024-02-19T19:03:10+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaocao.me/</loc>
-    <lastmod>2024-02-19T19:03:10+08:00</lastmod>
   </url><url>
     <loc>https://xiaocao.me/tags/</loc>
   </url>

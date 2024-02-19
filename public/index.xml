@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tiny Grassland</title>
+    <title>Caoe Daisy</title>
     <link>https://xiaocao.me/</link>
-    <description>Recent content on Tiny Grassland</description>
+    <description>Recent content on Caoe Daisy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Feb 2024 19:03:10 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Feb 2024 14:36:04 +0800</lastBuildDate>
     <atom:link href="https://xiaocao.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tiny Grassland</title>
-      <link>https://xiaocao.me/</link>
-      <pubDate>Mon, 19 Feb 2024 19:03:10 +0800</pubDate>
-      <guid>https://xiaocao.me/</guid>
-      <description>Welcome to my land!&#xA;This is a space dedicated to documenting my learning journey and the insights gained along the way.Continuous updates will reflect my ongoing progress. Below, you&amp;rsquo;ll find my personal introduction and details about the website.&#xA;Introduction I&amp;rsquo;m Xiaocao You, a junior majoring in Statistics at Shanghai University of Finance and Economics.My studies have sparked a interest in the realms of biomedical research and statistics.I acknowledge that my current knowledge is not extensive, so I maintain an open-minded attitude towards exploring directions in other fields.</description>
+      <title>Loading</title>
+      <link>https://xiaocao.me/posts/loading/</link>
+      <pubDate>Sat, 03 Feb 2024 14:36:04 +0800</pubDate>
+      <guid>https://xiaocao.me/posts/loading/</guid>
+      <description>Contents Loading&amp;hellip;&amp;hellip;(0/100) </description>
     </item>
   </channel>
 </rss>
