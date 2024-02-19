@@ -11,13 +11,13 @@ theme = 'tranquilpeak'
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-home\" aria-hidden=\"true\"></i>"
   url = "/"
 [[menu.main]]
-  weight = 4
-  identifier = "archives"
-  name = "Archives"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
-  url = "/archives"
+  weight = 2
+  identifier = "posts"
+  name = "Posts"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-book\" aria-hidden=\"true\"></i>"
+  url = "/posts"
 [[menu.main]]
-  weight = 5
+  weight = 3
   identifier = "about"
   name = "About"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-question\" aria-hidden=\"true\"></i>"
@@ -45,3 +45,4 @@ theme = 'tranquilpeak'
   thumbnailImagePosition = "right"
   autoThumbnailImage = true
   coverImage = "images/background.jpg"
+  keywords = ["游小草", "Xiaocao"]
