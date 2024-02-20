@@ -1,7 +1,10 @@
 baseURL = 'https://xiaocao.me/'
 languageCode = 'en-us'
+defaultContentLanguage = "en-us"
 title = 'Tiny Grassland'
 theme = 'tranquilpeak'
+paginate = 7
+canonifyurls = true
 
 ### side bar
 [[menu.main]]
@@ -9,22 +12,22 @@ theme = 'tranquilpeak'
   identifier = "home"
   name = "Home"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-home\" aria-hidden=\"true\"></i>"
-  url = "/"
+  pageRef = "/"
 [[menu.main]]
   weight = 4
-  identifier = "archives"
-  name = "Archives"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
-  url = "/archives"
+  identifier = "posts"
+  name = "Posts"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-book\" aria-hidden=\"true\"></i>"
+  pageRef = "/posts"
 [[menu.main]]
   weight = 5
   identifier = "about"
   name = "About"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-question\" aria-hidden=\"true\"></i>"
-  url = "/#about"
+  url = "/about"
 
 [[menu.links]]
-  weight = 0
+  weight = 2
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>"
