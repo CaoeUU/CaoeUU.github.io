@@ -43,7 +43,7 @@ canonifyurls = true
 
 ### Customization
 [params]
-  sidebarBehavior = 2
+  sidebarBehavior = 1
   thumbnailImage = true
   thumbnailImagePosition = "right"
   autoThumbnailImage = true
