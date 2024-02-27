@@ -2,4 +2,11 @@
   <span class="copyrights">
     &copy; {{ now.Format "2006" }} {{ with .Site.Params.footer.copyright }}{{ . | safeHTML }}{{ else }}{{ with .Site.Author.name }}{{ . }}{{ else }}{{ with .Site.Title }}{{ . }}{{ end }}{{ end }}{{ end }}. {{ i18n "footer.all_rights_reserved" }}
   </span>
+  <section class="powerby">
+    Theme modifided from
+    <a href="https://github.com/kakawait/hugo-tranquilpeak-theme" target="_blank" rel="noopener">tranquilpeak</a>
+    .Built with 
+    <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+
+  </section>
 </footer>

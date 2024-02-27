@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Basics of Mixture Cure Model",
+  
+  "datePublished": "2024-02-16T21:12:30+08:00",
+  "dateModified": "2024-02-16T21:12:30+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Xiaocao You",
+    
+    "image": "https://xiaocao.me/images/caosmile.jpg"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/xiaocao.me\/posts\/basics-of-mixture-cure-model\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tiny Grassland",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://xiaocao.me/images/caosmile.jpg"
+    }
+    
+  },
+  "description": " When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.\n",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.122.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Xiaocao You">
+<meta name="keywords" content="">
+<meta name="description" content="
+When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.
+">
+
+
+<meta property="og:description" content="
+When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Basics of Mixture Cure Model">
+<meta name="twitter:title" content="Basics of Mixture Cure Model">
+<meta property="og:url" content="https://xiaocao.me/posts/basics-of-mixture-cure-model/">
+<meta property="twitter:url" content="https://xiaocao.me/posts/basics-of-mixture-cure-model/">
+<meta property="og:site_name" content="Tiny Grassland">
+<meta property="og:description" content="
+When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.
+">
+<meta name="twitter:description" content="
+When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2024-02-16T21:12:30">
+  
+  
+    <meta property="article:modified_time" content="2024-02-16T21:12:30">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://xiaocao.me/images/caosmile.jpg">
+  <meta property="twitter:image" content="https://xiaocao.me/images/caosmile.jpg">
+
+
+
+
+
+
+    <title>Basics of Mixture Cure Model</title>
+
+    <link rel="icon" href="https://xiaocao.me/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://xiaocao.me/posts/basics-of-mixture-cure-model/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://xiaocao.me/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://xiaocao.me/" aria-label="Go to homepage">Tiny Grassland</a>
+  </div>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://xiaocao.me/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://xiaocao.me/images/caosmile.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Xiaocao You</h4>
+        
+          <h5 class="sidebar-profile-bio">A Junior Student Majored in Statistics in Shanghai University of Finance and Economics</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://xiaocao.me/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://xiaocao.me/posts/" title="Posts">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-book" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Posts</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://xiaocao.me/about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/CaoeUU" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.zhihu.com/people/5-78-58-98/posts" target="_blank" rel="noopener" title="Zhihu">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-zhihu" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Zhihu</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Basics of Mixture Cure Model
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2024-02-16T21:12:30&#43;08:00">
+        
+  February 16, 2024
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <blockquote>
+<p>When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.</p>
+</blockquote>
+<blockquote>
+<p>It might be considered a subsection within the realm of survival analysis or just an improvement of the Cox model. However, some assumptions of the models might not be apparent, which confused me for a considerable time. Therefore, here&rsquo;s an introduction to the mixture cure model, incorporating my perceptions and questions while learning this model.</p>
+</blockquote>
+<p>Common cure models can be divided into two categories: the <strong>mixture cure model (MCM)</strong> and the <strong>proportional hazard cure model</strong>, proposed by Boag (1949) and Yakovlev et al. (1996) separately. In this passage, we will focus only on the mixture cure model, with the latter possibly introduced later.</p>
+<h3 id="prerequisite">Prerequisite</h3>
+<p>Firstly, I assume that readers of this introduction already have a foundation in survival analysis. That is, they know basic definitions such as failure event, censored, and survival function. Currently, there&rsquo;s little concern with the hazard function, which can be ignored to simplify understanding.</p>
+<p>However, understanding censored data is paramount. Here&rsquo;s a brief introduction to it.</p>
+<p><strong>Censored data</strong> indicates that research subjects&rsquo; observations end prematurely for reasons not related to the research goal. For example, patients may exit the experiment due to other diseases, transferring to other hospitals, or reaching the experiment&rsquo;s predefined time limit.</p>
+<p>In real medical data, censored data is common. The censored data can be categorized into basically three types based on characteristics and reasons, but delving too deeply is unnecessary.</p>
+<p>One noteworthy aspect is that the start of observation varies from patient to patient. Not everyone enters the experiment at the same time. Some may start based on age, while others may need to finish specific treatments before timing begins. The start time can differ due to various qualifications.</p>
+<hr>
+<h3 id="main-text">Main Text</h3>
+<p>The traditional cure model assumes that everyone will eventually experience the failure event, differing only in survival time. However, due to medical advancements, more diseases now have the possibility of complete cure, weakening the authority of that assumption. Cure models are proposed to help analyze new data generated in this new era.</p>
+<p>It&rsquo;s crucial to clarify that <strong>the cure model provides an approximation of the survival function</strong>. While the objectives of cure models extend beyond estimating the survival function, what we gain through the model is a survival function of a patient (given the patient&rsquo;s coefficients). Additionally, this function is similar to cumulative distribution functions. The survival time $T$ of the patient is treated as a random variable, and our aim is to approximate its distribution. The nature of the model can be perceived as estimating the distribution function. However, each point of the survival function represents the time when the patient survived ($T$ is greater than the time), not the counterpart.</p>
+<h4 id="basic-hypotheses">Basic Hypotheses</h4>
+<p>The cure model assumes the entire population consists of two types of people: susceptible people and cured people. However, it doesn&rsquo;t mean a person belongs to a type exactly; instead, it is perceived through the lens of probability.</p>
+<p>Assume that a person in the dataset belongs to the susceptible type with a specific probability $P$. The probability $P$ is called the <strong>incidence</strong> of the model, which can also be considered as the incidence of the whole population. The survival functions of susceptible people can be estimated by the traditional Cox model, while the rest of the cured people are considered alive all the time, so they wouldn&rsquo;t fail and enjoy the survival function that is identically $1$. And $1-P$ is the cure rate.</p>
+<h4 id="formula">Formula</h4>
+<p>According to the hypotheses above, the model of the survival function can be written as:</p>
+<blockquote>
+<p>$S_{pop}(t|\textbf{X},\textbf{Z})=1-p(\textbf{X})+p(\textbf{X})S_{u}(t|\textbf{Z})$</p>
+</blockquote>
+<p>The reason we use two sets of notes $\textbf{X,Z}$ to represent coefficients is to help distinguish the coefficients into two parts, related to the estimation for susceptible and cured subpopulations separately. It is manifest that they can have the same coefficients; it&rsquo;s only for the clear expression of the model. Not all coefficients are needed in every part during the sequent estimating procedure.</p>
+<p>Due to the existence of the cure proportion, as $t$ approaches infinity, the survival function does not tend to 0 but approaches the limit of $1-p(\textbf{X})$, which is the cure rate.</p>
+<h4 id="parameters-estimation">Parameters Estimation</h4>
+<p>The formula above embodies the central idea of the mixture cure model. However, the estimate for each part has to be implemented with data. In the initial article where the model was proposed, the incidence $p$ was considered as a constant, having no connection with coefficients. Gradually, incidence was linked with coefficients, such as using the sigmoid function to approximate the relationship between the coefficients and the incidence by Farewell (1977). The susceptible parts are usually estimated by lognormal distribution, exponential distribution, or Weibull distribution. Later, there are also semi-parameter models and non-parameter models tailored for this model.</p>
+<hr>
+<h4 id="confusion-and-perception">Confusion and Perception</h4>
+<p>Finally, I want to address my confusion while learning this model. I was quite frustrated that:</p>
+<blockquote>
+<p>Why do we still use a probability of susceptibility to estimate when the patients in the survival data have gone through the failure event? Why not directly take their survival function as in the Cox model?</p>
+</blockquote>
+<blockquote>
+<p>Is the whole population divided into susceptible and unsusceptible parts or just divided among the censored data, considering only those who haven&rsquo;t been observed to fail could likely be cured?</p>
+</blockquote>
+<p>In hindsight, it was because I didn&rsquo;t figure out the logic of the model construction process. The data used for model training compose only a tiny portion of the huge population we want to approximate. For instance, patient data come from only a few hospitals nationwide, but we aim to understand the disease development model of the entire national population. We could clearly know when the patient is censored or failed for the data at hand, but those out of the dataset still need an estimate. If we have a patient randomly chosen from the entire population, having only collected his coefficients, with no clue about whether he would censor or fail, then how can we know his survival function can be modeled by the Cox model or simply equal to 1 and being cured? The answer is no, so we need the probability to estimate.</p>
+<p>The formula of the model can actually be understood as a <strong>distribution family</strong>, gaining a specific distribution when the patient&rsquo;s coefficients are substituted in.</p>
+<p>Regarding the subpopulation hypothesis, it might be because we have no clue to know how many people are cured or susceptible in the censored portion. So, we assume the entire population consists of the two parts. Also, the mixture cure model deems that the plateau of the K-M curve drawn by the survival data only comprises the cure part. Namely, the patients corresponding to the censored data are all cured.</p>
+<p>That concludes our exploration. Thank you for taking the time to read.</p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/loading/" data-tooltip="Loading" aria-label="PREVIOUS: Loading">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2024 <a href="https://github.com/CaoeUU">XiaocaoYou</a>. All Rights Reserved
+  </span>
+  <section class="powerby">
+    Theme modifided from
+    <a href="https://github.com/kakawait/hugo-tranquilpeak-theme" target="_blank" rel="noopener">tranquilpeak</a>
+    .Built with 
+    <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+
+  </section>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/loading/" data-tooltip="Loading" aria-label="PREVIOUS: Loading">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://xiaocao.me/images/caosmile.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Xiaocao You</h4>
+    
+      <div id="about-card-bio">A Junior Student Majored in Statistics in Shanghai University of Finance and Economics</div>
+    
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Shanghai, China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://xiaocao.me/images/background.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://xiaocao.me/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+
+
+
+
+    
+  </body>
+</html>
+
