@@ -4,6 +4,8 @@ date: 2024-02-20T10:39:47+08:00
 identifier: "home"
 ---
 
+{{<figure src="images/thinking.jpg" height=150 align=right margin-left=50px >}}
+
 Welcome to my land!
 
 This is a space dedicated to documenting my learning journey and the insights gained along the way. Continuous updates will reflect my ongoing progress.
