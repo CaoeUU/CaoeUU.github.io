@@ -3,6 +3,7 @@ title: "Cs231n Labnotes1"
 date: 2024-03-10T15:48:40+08:00
 tags:
 - cs231n
+- computer vision
 draft: false
 ---
 > I'm recently working on *[cs231n](http://cs231n.stanford.edu/)*. This is the *[github link](https://github.com/CaoeUU/CS231n-assignment-2023)* and I'll update the labnotes simultaneously here.
