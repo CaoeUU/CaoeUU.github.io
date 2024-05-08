@@ -2,24 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Tiny Grassland</title>
-    <link>https://xiaocao.me/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Tiny Grassland</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Feb 2024 21:12:30 +0800</lastBuildDate>
-    <atom:link href="https://xiaocao.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 May 2024 19:53:38 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>分布式计算整理-1</title>
+      <link>http://localhost:1313/posts/distributed-computing-notes-1/</link>
+      <pubDate>Wed, 08 May 2024 19:53:38 +0800</pubDate>
+      <guid>http://localhost:1313/posts/distributed-computing-notes-1/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;该笔记整理是基于&lt;a href=&#34;&#34;&gt;邱怡轩老师&lt;/a&gt;在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Simple Insights About Transformer Model</title>
+      <link>http://localhost:1313/posts/simple-insights-about-transformer-model/</link>
+      <pubDate>Tue, 12 Mar 2024 16:12:50 +0800</pubDate>
+      <guid>http://localhost:1313/posts/simple-insights-about-transformer-model/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This is a brief introduction to transformer that simplifies the model&amp;rsquo;s structure to help build a quick understanding of what it is trying to realize. The original blogs and video where I learned about it have been posted below.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Cs231n Labnotes1</title>
+      <link>http://localhost:1313/posts/lab-notes-for-cs231n-assignment-1-updating/</link>
+      <pubDate>Sun, 10 Mar 2024 15:48:40 +0800</pubDate>
+      <guid>http://localhost:1313/posts/lab-notes-for-cs231n-assignment-1-updating/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;I&amp;rsquo;m recently working on &lt;em&gt;&lt;a href=&#34;http://cs231n.stanford.edu/&#34;&gt;cs231n&lt;/a&gt;&lt;/em&gt;. This is the &lt;em&gt;&lt;a href=&#34;https://github.com/CaoeUU/CS231n-assignment-2023&#34;&gt;github link&lt;/a&gt;&lt;/em&gt; and I&amp;rsquo;ll update the labnotes simultaneously here.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
     <item>
       <title>Basics of Mixture Cure Model</title>
-      <link>https://xiaocao.me/posts/basics-of-mixture-cure-model/</link>
+      <link>http://localhost:1313/posts/basics-of-mixture-cure-model/</link>
       <pubDate>Fri, 16 Feb 2024 21:12:30 +0800</pubDate>
-      <guid>https://xiaocao.me/posts/basics-of-mixture-cure-model/</guid>
+      <guid>http://localhost:1313/posts/basics-of-mixture-cure-model/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>Loading</title>
-      <link>https://xiaocao.me/posts/loading/</link>
+      <link>http://localhost:1313/posts/loading/</link>
       <pubDate>Sat, 03 Feb 2024 14:36:04 +0800</pubDate>
-      <guid>https://xiaocao.me/posts/loading/</guid>
+      <guid>http://localhost:1313/posts/loading/</guid>
       <description>Contents Loading&amp;hellip;&amp;hellip;(0/100) </description>
     </item>
   </channel>
