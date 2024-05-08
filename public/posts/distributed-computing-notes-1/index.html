@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "分布式计算整理-1",
+  
+  "datePublished": "2024-05-08T19:53:38+08:00",
+  "dateModified": "2024-05-08T19:53:38+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Xiaocao You",
+    
+    "image": "https://xiaocao.me/images/caosmile.jpg"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/xiaocao.me\/posts\/distributed-computing-notes-1\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tiny Grassland",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://xiaocao.me/images/caosmile.jpg"
+    }
+    
+  },
+  "description": " 该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。\n",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.125.6 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Xiaocao You">
+<meta name="keywords" content="">
+<meta name="description" content="
+该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。
+">
+
+
+<meta property="og:description" content="
+该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分布式计算整理-1">
+<meta name="twitter:title" content="分布式计算整理-1">
+<meta property="og:url" content="https://xiaocao.me/posts/distributed-computing-notes-1/">
+<meta property="twitter:url" content="https://xiaocao.me/posts/distributed-computing-notes-1/">
+<meta property="og:site_name" content="Tiny Grassland">
+<meta property="og:description" content="
+该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。
+">
+<meta name="twitter:description" content="
+该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。
+">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2024-05-08T19:53:38">
+  
+  
+    <meta property="article:modified_time" content="2024-05-08T19:53:38">
+  
+  
+  
+  
+    
+      <meta property="article:tag" content="Distributed Computing">
+    
+      <meta property="article:tag" content="CS Notes">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://xiaocao.me/images/caosmile.jpg">
+  <meta property="twitter:image" content="https://xiaocao.me/images/caosmile.jpg">
+
+
+
+
+
+
+    <title>分布式计算整理-1</title>
+
+    <link rel="icon" href="https://xiaocao.me/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://xiaocao.me/posts/distributed-computing-notes-1/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://xiaocao.me/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+  
+
+
+
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://xiaocao.me/" aria-label="">Tiny Grassland</a>
+  </div>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://xiaocao.me/#about" aria-label="">
+          <img class="sidebar-profile-picture" src="https://xiaocao.me/images/caosmile.jpg" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">Xiaocao You</h4>
+        
+          <h5 class="sidebar-profile-bio">A Junior Student Majored in Statistics in Shanghai University of Finance and Economics</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://xiaocao.me/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://xiaocao.me/posts/" title="Posts">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-book" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Posts</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://xiaocao.me/about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/CaoeUU" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      分布式计算整理-1
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2024-05-08T19:53:38&#43;08:00">
+        
+   8, 2024
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <blockquote>
+<p>该笔记整理是基于<a href="">邱怡轩老师</a>在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。</p>
+</blockquote>
+<blockquote>
+<p><em>注：这份整理略去了python编程基础相关的内容，侧重点是分布式计算及其涉及的数学知识。</em></p>
+</blockquote>
+<ul>
+<li><em>目录更新中&hellip;</em></li>
+</ul>
+<h3 id="分布式计算与并行计算">分布式计算与并行计算</h3>
+<p>分布式计算与并行计算最主要的区别在于出发点：前者的目的是扩大计算规模（通过不断整合计算资源），而后者是提升计算效率（通过同时进行多个子任务）。</p>
+<p>对于并行计算，<strong>Amdahl定律</strong>可衡量其计算效率：
+$$S = \frac{1}{(1-p) + \frac{p}{s}}$$
+其中 $p$  为可并行部分的计算时间占比，$s$为这部分能够被加速的倍率。那么整个系统在使用并行计算之后的时间会变化为 <em><strong>不能并行部分所用时间 + 能并行从而被加速的部分所用时间</strong></em>。加速比则使用比率去表示时间的变化再取倒数。</p>
+<h3 id="函数式编程">函数式编程</h3>
+<p>不再一次性将数据读入到内存中，而是通过少次遍历来处理。主要内容是迭代器(<em>iterator</em>)及其变种，配合一些必要的例子。</p>
+<ul>
+<li>
+<p>iterator</p>
+<p>&ldquo;To access the elements of a lot of different containers.&rdquo; Container就是以其他类型数据作为元素一类的数据，比如<code>list</code>就是一个<em>container</em>。对于迭代器的讲解，可以参见CS61A中的<a href="https://www.youtube.com/watch?v=On-kFyFp8HY"><em>Iterators</em></a>。</p>
+<ul>
+<li>
+<p>例1：计算文件行数</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 文件本身可作为迭代器</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(path_of_data) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> file:
+</span></span><span style="display:flex;"><span>        count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div></li>
+<li>
+<p>例2：计算样本方差</p>
+<p>拆解样本方差即可：
+$$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X_i^2-n\bar{X}^2)$$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>t <span style="color:#f92672">=</span> iter(samples)
+</span></span><span style="display:flex;"><span>count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> t:
+</span></span><span style="display:flex;"><span>    count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    quad_sum <span style="color:#f92672">+=</span> i<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    linear_sum <span style="color:#f92672">+=</span> i
+</span></span><span style="display:flex;"><span>sample_var <span style="color:#f92672">=</span> (quad_sum <span style="color:#f92672">-</span> count<span style="color:#f92672">*</span>linear_sum<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> (count<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div></li>
+<li>
+<p>例3：按给定概率抽样</p>
+<p>$w=(a_1,\dots,a_n)$，$v=(v_1,\dots,v_n)$，以 $\frac{a_i}{\sum_j a_j}$ 的概率抽取$v_i$。</p>
+<p>算法伪代码如下：
+<a href="https://xiaocao.me/images/sampling-algorithm.png">!sampling-algorithm</a></p>
+<p>证明思路：</p>
+<ul>
+<li>若最终取样结果为$v_k$，则需保证第k步迭代时成功取到$a_k$，且其后要保持这一取样不变，而不论此前所取样本。因此，该算法所取的样本$v_{i^*} = v_k$的概率为：</li>
+</ul>
+<p>$$p = \frac{a_k}{\sum_{i=1}^{k}a_i} \cdot (1 - \frac{a_{k+1}}{\sum_{i=1}^{k+1}a_i})\dots(1 - \frac{a_n}{\sum_{i=1}^{n}a_i}) = \frac{a_k}{\sum_{i=1}^{n}a_i}$$</p>
+</li>
+</ul>
+</li>
+<li>
+<p>islice</p>
+<p>需要载入<code>itertools</code>包，传入迭代器和截断数量进行切片。</p>
+</li>
+</ul>
+<p><em>以下三类函数均为higher order function，即以函数作为参数传入的函数。</em></p>
+<ul>
+<li>
+<p>reduce</p>
+<p>需要载入<code>functools</code>包。接收的参数是函数操作和迭代对象，主要功能是让迭代器中的元素逐个进行二元运算，在迭代器所迭代的维度上降维至一维。传入的函数操作应该包含两个参数，分别是迭代器的当前对象和下一个对象。需要注意的是python本身的加法运算符进行的加法运算是和数据类型有关的。</p>
+</li>
+<li>
+<p>filter</p>
+<p>接收的函数需要返回布尔值，并且筛选迭代器中函数值为真的元素。在生成迭代器的时候并没有真的执行对应的筛选函数，只有在使用<code>next()</code>返回结果时才会执行。</p>
+</li>
+<li>
+<p>map</p>
+<p>将迭代器中所有元素都按照某个函数映射成另一个迭代器，同样在返回结果时才会执行函数。</p>
+</li>
+</ul>
+<p>使用这些函数，且不出现显式<code>for</code>循环来实现例子如下：</p>
+<ol>
+<li>计算文件行数：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#f92672">import</span> functools
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">with</span> open(path_of_file) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>   functools<span style="color:#f92672">.</span>reduce(<span style="color:#66d9ef">lambda</span> x: bool(x)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, file)
+</span></span></code></pre></div></li>
+<li>计算样本均值
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>   <span style="color:#f92672">import</span> functools
+</span></span><span style="display:flex;"><span>   t <span style="color:#f92672">=</span> iter(vector)
+</span></span><span style="display:flex;"><span>   functools<span style="color:#f92672">.</span>reduce(<span style="color:#66d9ef">lambda</span> x, y: (x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span>y[<span style="color:#ae81ff">0</span>], x[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>y[<span style="color:#ae81ff">1</span>]), map(<span style="color:#66d9ef">lambda</span> x: (<span style="color:#ae81ff">1</span>, x),t))
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="ray基础">Ray基础</h3>
+<p>Ray是基于python编写的分布式计算框架，之后涉及的分布式计算内容都会基于这个框架。下面是笔者认为使用Ray需要掌握和理解的内容：</p>
+<ul>
+<li>
+<p><strong>初始化和结束</strong></p>
+<p>在搭建好ray的环境并载入包后，需要使用<code>ray.init()</code>对其进行初始化（且仅能进行一次初始化）；程序结束时用<code>ray.shutdown()</code>来关闭。</p>
+</li>
+<li>
+<p><strong><code>ray.remote()</code>生成的任务及提取</strong></p>
+<p><code>@ray.remote</code>作为函数装饰器，使得函数被调用时生成计算任务（<code>ObjectRef</code>类型），并分发给各个计算资源，分发后立即进行计算。计算结果需要用<code>ray.get()</code>来获取。也就是说<code>ray.get()</code>并不是一个启动任务的函数，而只是“被动地”收结果。task在被分发之后就立马被执行了，如果在get的时候任务还没有执行完，那么就得在这个任务上等，才能执行下一句代码。因此说ray.get()是具有阻挡性的。基于这种阻挡性，在取结果的时候应该优先取那些耗时更短的，以便于对先出的结果先进行后续操作。</p>
+</li>
+<li>
+<p><code>ray.get()</code></p>
+<p>需要注意的是，<code>ray.get()</code>是将数据读取到本地。而进行计算时，并不需要在本地进行，因此在用<code>ray.remote</code>修饰的函数操作中不必要使用<code>ray.get()</code>将数据读取出来，直接进行计算即可*<em>这点可能需要核实</em>。 而且它并不接受迭代器作为参数，需要先用<code>list</code>把任务提取出来再传入。</p>
+</li>
+<li>
+<p><strong><code>ray.put()</code>让计算资源共享数据</strong></p>
+<p>该函数的结果同样是<code>ObjectRef</code>类型，这个结果可以直接作为参数传入到要调用的函数中去，也可以使用<code>ray.get()</code>重新获取。</p>
+</li>
+<li>
+<p><strong>使用ray进行文件读取</strong>
+考虑到数据的传输效率，单行的传输可能过于低效，因此需要将数据分为更大一些大的批次进行传输。下面是一个1000,000行数据批量读取的示例，需要用到<code>more_itertools</code>包：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> ray
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> more_itertools
+</span></span><span style="display:flex;"><span>ray<span style="color:#f92672">.</span>init()
+</span></span><span style="display:flex;"><span>batch_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">txt_to_mat</span>(txt):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>loadtxt(txt)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mat_to_obj</span>(mat):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> ray<span style="color:#f92672">.</span>put(mat)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(path_to_file_txt) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>  it <span style="color:#f92672">=</span> more_itertools<span style="color:#f92672">.</span>chunked(file, batchsize)
+</span></span><span style="display:flex;"><span>  it_obj <span style="color:#f92672">=</span> map(mat_to_obj, map(txt_to_mat, it))
+</span></span><span style="display:flex;"><span>  batches <span style="color:#f92672">=</span> list(it_obj)
+</span></span></code></pre></div><p>需要注意的是，最后一行以<code>list</code>的方式提取出迭代器的元素。由于外层的<code>map</code>已经将原始的矩阵数据传递到了远端，所以这里的元素实际上是<code>ObjectRef</code>对象，直接提取不会有太大问题。另外，由于<code>map</code>的运算是在调用迭代器元素的时候才生效，而文件关闭后不能再通过<code>file</code>读取文件内容，所以提取操作应该在<code>with</code>代码块当中。</p>
+</li>
+</ul>
+<h3 id="数值计算">数值计算</h3>
+<p>数值计算的原则出发点是计算的效率，用时间复杂度来衡量。下面先给出矩阵运算的时间复杂度，再相应地给出计算原则。</p>
+<p><strong>矩阵乘法</strong>的时间复杂度可由向量乘法出发。$n$ 维向量乘法$\textbf{xy} = \sum_{i=1}^{n}x_iy_i$，时间复杂度可视为 $O(n)$。类似地可以得到 $A_{n \times p}\textbf{x}<em>{p\times1}$ 的时间复杂度为 $O(np)$， $A</em>{n \times p} B_{p \times m}$ 的时间复杂度为$O(mnp)$。</p>
+<p><strong>矩阵求逆</strong>的基本计算方式是高斯消元法，即在矩阵右侧添加相同维度的单位阵进行初等行变换。分析方式和矩阵乘法类似，以化为行阶梯型矩阵为例，需要操作的次数是 $n[(n-1)+(n-2)+\dots+1]$，即复杂度为 $O(n^3)$。因此矩阵求逆的时间复杂度为 $O(n^3)$。而以解线性方程组的形式求逆时（尤其是含含有逆矩阵乘以向量），由于增广矩阵右半部分是一个向量，所以时间复杂度会低于直接求逆。</p>
+<p>因此，有计算原则：</p>
+<ol>
+<li>多个矩阵相乘优先进行维度更小的运算。</li>
+<li>将矩阵求逆运算转化为解线性方程组。</li>
+<li>分析矩阵结构简化运算（如与单位矩阵相乘时可以利用广播机制来简化）</li>
+<li>将多次矩阵与向量的乘法转化为矩阵与矩阵的乘法。</li>
+<li>避免重复计算相同的内容。</li>
+</ol>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small"></span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://xiaocao.me/tags/distributed-computing/">Distributed Computing</a>
+
+  <a class="tag tag--primary tag--small" href="https://xiaocao.me/tags/cs-notes/">CS Notes</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml"></span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label=": Simple Insights About Transformer Model">
+          
+              <span class="hide-xs hide-sm text-small icon-mr"></span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2024 <a href="https://github.com/CaoeUU">XiaocaoYou</a>. 
+  </span>
+  <section class="powerby">
+    Theme modifided from
+    <a href="https://github.com/kakawait/hugo-tranquilpeak-theme" target="_blank" rel="noopener">tranquilpeak</a>
+    .Built with 
+    <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+
+  </section>
+  <script async 
+  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <span id="busuanzi_container_site_uv">
+    Total views: <span id="busuanzi_value_site_uv"></span>
+  </span>
+</footer>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml"></span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label=": Simple Insights About Transformer Model">
+          
+              <span class="hide-xs hide-sm text-small icon-mr"></span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://xiaocao.me/images/caosmile.jpg" alt="" />
+    
+    <h4 id="about-card-name">Xiaocao You</h4>
+    
+      <div id="about-card-bio">A Junior Student Majored in Statistics in Shanghai University of Finance and Economics</div>
+    
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Shanghai, China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://xiaocao.me/images/background.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://xiaocao.me/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+
+
+
+
+    
+  </body>
+</html>
+
