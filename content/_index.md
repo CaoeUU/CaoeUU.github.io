@@ -21,4 +21,4 @@ But still, I hope one day I would perfect this land. Let's see when those boastf
 
 It's somehow like playing a cultivation games when seeing those "tasks". Maybe there exist someone like masters and could do some in-app purchases to speed up this process. But I might need a huge whale to do so and it's likely to turn out to be no use.
 
-Finally I want to express my thanks to ***[Prof. Qiu](https://statr.me/)***, who inspired me to build this personal website and also I grabbed his homepage as reference. Meanwhile, thanks for *Chenrui Wang*'s powerful assistance during the construction procedure, without whom I might had quitted halfway.
+Finally I want to express my thanks to ***[Prof. Qiu](https://statr.me/)***, who inspired me to build this personal website and also I grabbed his homepage as reference. Meanwhile, thanks for ***[Chenrui Wang](https://github.com/Aoblex)***'s powerful assistance during the construction procedure, without whom I might had quitted halfway.
