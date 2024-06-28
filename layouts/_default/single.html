@@ -4,8 +4,8 @@
       {{ if ( .Params.password | default "" ) }}
       <script>
         (function(){
-                  if (prompt('请输入文章密码') != {{ .Params.password }}){
-              alert('密码错误！');
+                  if (prompt('前方道路施工中，请出示通行证！') != {{ .Params.password }}){
+              alert('通行证无效哦~');
               if (history.length === 1) {
                 window.opener = null;
                 window.open('', '_self');
