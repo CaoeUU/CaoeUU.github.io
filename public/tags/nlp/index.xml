@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on Tiny Grassland</title>
+    <link>https://xiaocao.me/tags/nlp/</link>
+    <description>Recent content in NLP on Tiny Grassland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Mar 2024 16:12:50 +0800</lastBuildDate>
+    <atom:link href="https://xiaocao.me/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Insights About Transformer Model</title>
+      <link>https://xiaocao.me/posts/simple-insights-about-transformer-model/</link>
+      <pubDate>Tue, 12 Mar 2024 16:12:50 +0800</pubDate>
+      <guid>https://xiaocao.me/posts/simple-insights-about-transformer-model/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This is a brief introduction to transformer that simplifies the model&amp;rsquo;s structure to help build a quick understanding of what it is trying to realize. The original blogs and video where I learned about it have been posted below.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>

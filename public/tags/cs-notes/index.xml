@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS Notes on Tiny Grassland</title>
+    <link>https://xiaocao.me/tags/cs-notes/</link>
+    <description>Recent content in CS Notes on Tiny Grassland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 May 2024 19:53:38 +0800</lastBuildDate>
+    <atom:link href="https://xiaocao.me/tags/cs-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>分布式计算整理-1</title>
+      <link>https://xiaocao.me/posts/distributed-computing-notes-1/</link>
+      <pubDate>Wed, 08 May 2024 19:53:38 +0800</pubDate>
+      <guid>https://xiaocao.me/posts/distributed-computing-notes-1/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;该笔记整理是基于&lt;a href=&#34;&#34;&gt;邱怡轩老师&lt;/a&gt;在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>
