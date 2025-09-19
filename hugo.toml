@@ -1,9 +1,9 @@
-baseURL = 'https://xiaocao.me/'
+baseURL = 'https://caoeuu.github.io/'
 languageCode = 'en-us'
 defaultContentLanguage = "en-us"
 title = 'Tiny Grassland'
 theme = 'tranquilpeak'
-paginate = 7
+pagination.pagerSize = 7
 canonifyurls = true
 
 ### side bar

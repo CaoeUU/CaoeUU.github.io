@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     
     <script type="application/ld+json">
 
@@ -13,23 +13,16 @@
   "dateModified": "2024-02-16T21:12:30+08:00",
   "author": {
     "@type": "Person",
-    "name": "Xiaocao You",
-    
-    "image": "https://xiaocao.me/images/caosmile.jpg"
+    "name":  null ,
     
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/xiaocao.me\/posts\/basics-of-mixture-cure-model\/" 
+    "@id": "http:\/\/localhost:1313\/posts\/basics-of-mixture-cure-model\/" 
   },
   "publisher": {
     "@type": "Organization",
     "name": "Tiny Grassland",
-    
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://xiaocao.me/images/caosmile.jpg"
-    }
     
   },
   "description": " When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.\n",
@@ -40,29 +33,25 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.122.0 with theme Tranquilpeak 0.5.3-BETA">
-<meta name="author" content="Xiaocao You">
+<meta name="generator" content="Hugo 0.146.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="">
 <meta name="keywords" content="">
 <meta name="description" content="
-When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.
-">
+When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.">
 
 
 <meta property="og:description" content="
-When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.
-">
+When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Basics of Mixture Cure Model">
 <meta name="twitter:title" content="Basics of Mixture Cure Model">
-<meta property="og:url" content="https://xiaocao.me/posts/basics-of-mixture-cure-model/">
-<meta property="twitter:url" content="https://xiaocao.me/posts/basics-of-mixture-cure-model/">
+<meta property="og:url" content="http://localhost:1313/posts/basics-of-mixture-cure-model/">
+<meta property="twitter:url" content="http://localhost:1313/posts/basics-of-mixture-cure-model/">
 <meta property="og:site_name" content="Tiny Grassland">
 <meta property="og:description" content="
-When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.
-">
+When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.">
 <meta name="twitter:description" content="
-When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.
-">
+When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.">
 <meta property="og:locale" content="en-us">
 
   
@@ -84,9 +73,6 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
 
 
 
-  <meta property="og:image" content="https://xiaocao.me/images/caosmile.jpg">
-  <meta property="twitter:image" content="https://xiaocao.me/images/caosmile.jpg">
-
 
 
 
@@ -94,12 +80,12 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
 
     <title>Basics of Mixture Cure Model</title>
 
-    <link rel="icon" href="https://xiaocao.me/favicon.png">
+    <link rel="icon" href="http://localhost:1313/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://xiaocao.me/posts/basics-of-mixture-cure-model/">
+    <link rel="canonical" href="http://localhost:1313/posts/basics-of-mixture-cure-model/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -107,13 +93,10 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
     
     
     
-    <link rel="stylesheet" href="https://xiaocao.me/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
     
     
 
-    
-      
-    
     
   </head>
 
@@ -122,13 +105,11 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
       
     </div>
 
-    
-
     <div id="blog">
       <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://xiaocao.me/" aria-label="Go to homepage">Tiny Grassland</a>
+    <a class="header-title-link" href="http://localhost:1313/" aria-label="Go to homepage">Tiny Grassland</a>
   </div>
   
 </header>
@@ -136,21 +117,11 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
       <nav id="sidebar" data-behavior="1">
   <div class="sidebar-container">
     
-      <div class="sidebar-profile">
-        <a href="https://xiaocao.me/#about" aria-label="Read more about the author">
-          <img class="sidebar-profile-picture" src="https://xiaocao.me/images/caosmile.jpg" alt="Author&#39;s picture" />
-        </a>
-        <h4 class="sidebar-profile-name">Xiaocao You</h4>
-        
-          <h5 class="sidebar-profile-bio">A Junior Student Majored in Statistics in Shanghai University of Finance and Economics</h5>
-        
-      </div>
-    
     <ul class="sidebar-buttons">
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://xiaocao.me/" title="Home">
+      <a class="sidebar-button-link " href="http://localhost:1313/" title="Home">
     
       <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
       
@@ -160,7 +131,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://xiaocao.me/posts/" title="Posts">
+      <a class="sidebar-button-link " href="http://localhost:1313/posts/" title="Posts">
     
       <i class="sidebar-button-icon fas fa-lg fa-book" aria-hidden="true"></i>
       
@@ -170,7 +141,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://xiaocao.me/about" title="About">
+      <a class="sidebar-button-link " href="http://localhost:1313/about" title="About">
     
       <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
       
@@ -198,6 +169,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
       
 
     </ul>
+    
   </div>
 </nav>
 
@@ -233,11 +205,9 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <blockquote>
-<p>When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.</p>
-</blockquote>
+<p>When it comes to Survival Analysis, numerous bloggers have provided clear introductions. In contrast, content related to cure models is relatively scarce.</p></blockquote>
 <blockquote>
-<p>It might be considered a subsection within the realm of survival analysis or just an improvement of the Cox model. However, some assumptions of the models might not be apparent, which confused me for a considerable time. Therefore, here&rsquo;s an introduction to the mixture cure model, incorporating my perceptions and questions while learning this model.</p>
-</blockquote>
+<p>It might be considered a subsection within the realm of survival analysis or just an improvement of the Cox model. However, some assumptions of the models might not be apparent, which confused me for a considerable time. Therefore, here&rsquo;s an introduction to the mixture cure model, incorporating my perceptions and questions while learning this model.</p></blockquote>
 <p>Common cure models can be divided into two categories: the <strong>mixture cure model (MCM)</strong> and the <strong>proportional hazard cure model</strong>, proposed by Boag (1949) and Yakovlev et al. (1996) separately. In this passage, we will focus only on the mixture cure model, with the latter possibly introduced later.</p>
 <h3 id="prerequisite">Prerequisite</h3>
 <p>Firstly, I assume that readers of this introduction already have a foundation in survival analysis. That is, they know basic definitions such as failure event, censored, and survival function. Currently, there&rsquo;s little concern with the hazard function, which can be ignored to simplify understanding.</p>
@@ -255,8 +225,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
 <h4 id="formula">Formula</h4>
 <p>According to the hypotheses above, the model of the survival function can be written as:</p>
 <blockquote>
-<p>$S_{pop}(t|\textbf{X},\textbf{Z})=1-p(\textbf{X})+p(\textbf{X})S_{u}(t|\textbf{Z})$</p>
-</blockquote>
+<p>$S_{pop}(t|\textbf{X},\textbf{Z})=1-p(\textbf{X})+p(\textbf{X})S_{u}(t|\textbf{Z})$</p></blockquote>
 <p>The reason we use two sets of notes $\textbf{X,Z}$ to represent coefficients is to help distinguish the coefficients into two parts, related to the estimation for susceptible and cured subpopulations separately. It is manifest that they can have the same coefficients; it&rsquo;s only for the clear expression of the model. Not all coefficients are needed in every part during the sequent estimating procedure.</p>
 <p>Due to the existence of the cure proportion, as $t$ approaches infinity, the survival function does not tend to 0 but approaches the limit of $1-p(\textbf{X})$, which is the cure rate.</p>
 <h4 id="parameters-estimation">Parameters Estimation</h4>
@@ -265,11 +234,9 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
 <h4 id="confusion-and-perception">Confusion and Perception</h4>
 <p>Finally, I want to address my confusion while learning this model. I was quite frustrated that:</p>
 <blockquote>
-<p>Why do we still use a probability of susceptibility to estimate when the patients in the survival data have gone through the failure event? Why not directly take their survival function as in the Cox model?</p>
-</blockquote>
+<p>Why do we still use a probability of susceptibility to estimate when the patients in the survival data have gone through the failure event? Why not directly take their survival function as in the Cox model?</p></blockquote>
 <blockquote>
-<p>Is the whole population divided into susceptible and unsusceptible parts or just divided among the censored data, considering only those who haven&rsquo;t been observed to fail could likely be cured?</p>
-</blockquote>
+<p>Is the whole population divided into susceptible and unsusceptible parts or just divided among the censored data, considering only those who haven&rsquo;t been observed to fail could likely be cured?</p></blockquote>
 <p>In hindsight, it was because I didn&rsquo;t figure out the logic of the model construction process. The data used for model training compose only a tiny portion of the huge population we want to approximate. For instance, patient data come from only a few hospitals nationwide, but we aim to understand the disease development model of the entire national population. We could clearly know when the patient is censored or failed for the data at hand, but those out of the dataset still need an estimate. If we have a patient randomly chosen from the entire population, having only collected his coefficients, with no clue about whether he would censor or fail, then how can we know his survival function can be modeled by the Cox model or simply equal to 1 and being cured? The answer is no, so we need the probability to estimate.</p>
 <p>The formula of the model can actually be understood as a <strong>distribution family</strong>, gaining a specific distribution when the patient&rsquo;s coefficients are substituted in.</p>
 <p>Regarding the subpopulation hypothesis, it might be because we have no clue to know how many people are cured or susceptible in the censored portion. So, we assume the entire population consists of the two parts. Also, the mixture cure model deems that the plateau of the K-M curve drawn by the survival data only comprises the cure part. Namely, the patients corresponding to the censored data are all cured.</p>
@@ -290,7 +257,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/lab-notes-for-cs231n-assignment-1-updating/" data-tooltip="Cs231n Labnotes1" aria-label="NEXT: Cs231n Labnotes1">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/lab-notes-for-cs231n-assignment-1-updating/" data-tooltip="Cs231n Labnotes1" aria-label="NEXT: Cs231n Labnotes1">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -298,7 +265,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/loading/" data-tooltip="Loading" aria-label="PREVIOUS: Loading">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/loading/" data-tooltip="Loading" aria-label="PREVIOUS: Loading">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -336,7 +303,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2024 <a href="https://github.com/CaoeUU">XiaocaoYou</a>. All Rights Reserved
+    &copy; 2025 <a href="https://github.com/CaoeUU">XiaocaoYou</a>. All Rights Reserved
   </span>
   <section class="powerby">
     Theme modifided from
@@ -364,7 +331,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/lab-notes-for-cs231n-assignment-1-updating/" data-tooltip="Cs231n Labnotes1" aria-label="NEXT: Cs231n Labnotes1">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/lab-notes-for-cs231n-assignment-1-updating/" data-tooltip="Cs231n Labnotes1" aria-label="NEXT: Cs231n Labnotes1">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -372,7 +339,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/loading/" data-tooltip="Loading" aria-label="PREVIOUS: Loading">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/loading/" data-tooltip="Loading" aria-label="PREVIOUS: Loading">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -413,19 +380,9 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
       <i class="fa fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://xiaocao.me/images/caosmile.jpg" alt="Author&#39;s picture" />
-    
-    <h4 id="about-card-name">Xiaocao You</h4>
-    
-      <div id="about-card-bio">A Junior Student Majored in Statistics in Shanghai University of Finance and Economics</div>
+    <h4 id="about-card-name"></h4>
     
     
-    
-      <div id="about-card-location">
-        <i class="fa fa-map-marker-alt"></i>
-        <br/>
-        Shanghai, China
-      </div>
     
   </div>
 </div>
@@ -435,7 +392,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
     
   
     
-      <div id="cover" style="background-image:url('https://xiaocao.me/images/background.jpg');"></div>
+      <div id="cover" style="background-image:url('http://localhost:1313/images/background.jpg');"></div>
     
   
 
@@ -446,7 +403,7 @@ When it comes to Survival Analysis, numerous bloggers have provided clear introd
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://xiaocao.me/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+<script src="http://localhost:1313/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
 

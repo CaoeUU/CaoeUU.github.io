@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     
     <script type="application/ld+json">
 
@@ -13,23 +13,16 @@
   "dateModified": "2024-05-08T19:53:38+08:00",
   "author": {
     "@type": "Person",
-    "name": "Xiaocao You",
-    
-    "image": "https://xiaocao.me/images/caosmile.jpg"
+    "name":  null ,
     
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/xiaocao.me\/posts\/distributed-computing-notes-1\/" 
+    "@id": "http:\/\/localhost:1313\/posts\/distributed-computing-notes-1\/" 
   },
   "publisher": {
     "@type": "Organization",
     "name": "Tiny Grassland",
-    
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://xiaocao.me/images/caosmile.jpg"
-    }
     
   },
   "description": " 该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。\n",
@@ -40,29 +33,25 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.122.0 with theme Tranquilpeak 0.5.3-BETA">
-<meta name="author" content="Xiaocao You">
+<meta name="generator" content="Hugo 0.146.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="">
 <meta name="keywords" content="">
 <meta name="description" content="
-该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。
-">
+该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。">
 
 
 <meta property="og:description" content="
-该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。
-">
+该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分布式计算整理-1">
 <meta name="twitter:title" content="分布式计算整理-1">
-<meta property="og:url" content="https://xiaocao.me/posts/distributed-computing-notes-1/">
-<meta property="twitter:url" content="https://xiaocao.me/posts/distributed-computing-notes-1/">
+<meta property="og:url" content="http://localhost:1313/posts/distributed-computing-notes-1/">
+<meta property="twitter:url" content="http://localhost:1313/posts/distributed-computing-notes-1/">
 <meta property="og:site_name" content="Tiny Grassland">
 <meta property="og:description" content="
-该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。
-">
+该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。">
 <meta name="twitter:description" content="
-该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。
-">
+该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。">
 <meta property="og:locale" content="en-us">
 
   
@@ -90,9 +79,6 @@
 
 
 
-  <meta property="og:image" content="https://xiaocao.me/images/caosmile.jpg">
-  <meta property="twitter:image" content="https://xiaocao.me/images/caosmile.jpg">
-
 
 
 
@@ -100,12 +86,12 @@
 
     <title>分布式计算整理-1</title>
 
-    <link rel="icon" href="https://xiaocao.me/favicon.png">
+    <link rel="icon" href="http://localhost:1313/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://xiaocao.me/posts/distributed-computing-notes-1/">
+    <link rel="canonical" href="http://localhost:1313/posts/distributed-computing-notes-1/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -113,13 +99,10 @@
     
     
     
-    <link rel="stylesheet" href="https://xiaocao.me/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
     
     
 
-    
-      
-    
     
   </head>
 
@@ -128,13 +111,11 @@
       
     </div>
 
-    
-
     <div id="blog">
       <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://xiaocao.me/" aria-label="Go to homepage">Tiny Grassland</a>
+    <a class="header-title-link" href="http://localhost:1313/" aria-label="Go to homepage">Tiny Grassland</a>
   </div>
   
 </header>
@@ -142,21 +123,11 @@
       <nav id="sidebar" data-behavior="1">
   <div class="sidebar-container">
     
-      <div class="sidebar-profile">
-        <a href="https://xiaocao.me/#about" aria-label="Read more about the author">
-          <img class="sidebar-profile-picture" src="https://xiaocao.me/images/caosmile.jpg" alt="Author&#39;s picture" />
-        </a>
-        <h4 class="sidebar-profile-name">Xiaocao You</h4>
-        
-          <h5 class="sidebar-profile-bio">A Junior Student Majored in Statistics in Shanghai University of Finance and Economics</h5>
-        
-      </div>
-    
     <ul class="sidebar-buttons">
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://xiaocao.me/" title="Home">
+      <a class="sidebar-button-link " href="http://localhost:1313/" title="Home">
     
       <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
       
@@ -166,7 +137,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://xiaocao.me/posts/" title="Posts">
+      <a class="sidebar-button-link " href="http://localhost:1313/posts/" title="Posts">
     
       <i class="sidebar-button-icon fas fa-lg fa-book" aria-hidden="true"></i>
       
@@ -176,7 +147,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://xiaocao.me/about" title="About">
+      <a class="sidebar-button-link " href="http://localhost:1313/about" title="About">
     
       <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
       
@@ -204,6 +175,7 @@
       
 
     </ul>
+    
   </div>
 </nav>
 
@@ -239,11 +211,9 @@
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <blockquote>
-<p>该笔记整理是基于<a href="">邱怡轩老师</a>在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。</p>
-</blockquote>
+<p>该笔记整理是基于<a href="">邱怡轩老师</a>在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。</p></blockquote>
 <blockquote>
-<p><em>注：这份整理略去了python编程基础相关的内容，侧重点是分布式计算及其涉及的数学知识。</em></p>
-</blockquote>
+<p><em>注：这份整理略去了python编程基础相关的内容，侧重点是分布式计算及其涉及的数学知识。</em></p></blockquote>
 <ul>
 <li><em>目录更新中&hellip;</em></li>
 </ul>
@@ -283,7 +253,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
 <p>例3：按给定概率抽样</p>
 <p>$w=(a_1,\dots,a_n)$，$v=(v_1,\dots,v_n)$，以 $\frac{a_i}{\sum_j a_j}$ 的概率抽取$v_i$。</p>
 <p>算法伪代码如下：
-<a href="https://xiaocao.me/images/sampling-algorithm.png">!sampling-algorithm</a></p>
+<a href="http://localhost:1313/images/sampling-algorithm.png">!sampling-algorithm</a></p>
 <p>证明思路：</p>
 <ul>
 <li>若最终取样结果为$v_k$，则需保证第k步迭代时成功取到$a_k$，且其后要保持这一取样不变，而不论此前所取样本。因此，该算法所取的样本$v_{i^*} = v_k$的概率为：</li>
@@ -387,9 +357,9 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://xiaocao.me/tags/distributed-computing/">Distributed Computing</a>
+  <a class="tag tag--primary tag--small" href="http://localhost:1313/tags/distributed-computing/">Distributed Computing</a>
 
-  <a class="tag tag--primary tag--small" href="https://xiaocao.me/tags/cs-notes/">CS Notes</a>
+  <a class="tag tag--primary tag--small" href="http://localhost:1313/tags/cs-notes/">CS Notes</a>
 
                   </div>
                 
@@ -402,7 +372,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/to-mino-liu/" data-tooltip="To Mino Liu" aria-label="NEXT: To Mino Liu">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/to-mino-liu/" data-tooltip="To Mino Liu" aria-label="NEXT: To Mino Liu">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -410,7 +380,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="PREVIOUS: Simple Insights About Transformer Model">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="PREVIOUS: Simple Insights About Transformer Model">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -448,7 +418,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2024 <a href="https://github.com/CaoeUU">XiaocaoYou</a>. All Rights Reserved
+    &copy; 2025 <a href="https://github.com/CaoeUU">XiaocaoYou</a>. All Rights Reserved
   </span>
   <section class="powerby">
     Theme modifided from
@@ -476,7 +446,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/to-mino-liu/" data-tooltip="To Mino Liu" aria-label="NEXT: To Mino Liu">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/to-mino-liu/" data-tooltip="To Mino Liu" aria-label="NEXT: To Mino Liu">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -484,7 +454,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://xiaocao.me/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="PREVIOUS: Simple Insights About Transformer Model">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="PREVIOUS: Simple Insights About Transformer Model">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -525,19 +495,9 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
       <i class="fa fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://xiaocao.me/images/caosmile.jpg" alt="Author&#39;s picture" />
-    
-    <h4 id="about-card-name">Xiaocao You</h4>
-    
-      <div id="about-card-bio">A Junior Student Majored in Statistics in Shanghai University of Finance and Economics</div>
+    <h4 id="about-card-name"></h4>
     
     
-    
-      <div id="about-card-location">
-        <i class="fa fa-map-marker-alt"></i>
-        <br/>
-        Shanghai, China
-      </div>
     
   </div>
 </div>
@@ -547,7 +507,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
     
   
     
-      <div id="cover" style="background-image:url('https://xiaocao.me/images/background.jpg');"></div>
+      <div id="cover" style="background-image:url('http://localhost:1313/images/background.jpg');"></div>
     
   
 
@@ -558,7 +518,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://xiaocao.me/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+<script src="http://localhost:1313/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
 
