@@ -2,51 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://caoeuu.github.io/about/</loc>
     <lastmod>2024-12-30T19:27:02+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://caoeuu.github.io/posts/</loc>
     <lastmod>2024-06-28T14:01:54+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/to-mino-liu/</loc>
-    <lastmod>2024-06-28T14:01:54+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/cs-notes/</loc>
+    <loc>https://caoeuu.github.io/tags/cs-notes/</loc>
     <lastmod>2024-05-08T19:53:38+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/distributed-computing/</loc>
+    <loc>https://caoeuu.github.io/tags/distributed-computing/</loc>
     <lastmod>2024-05-08T19:53:38+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://caoeuu.github.io/tags/</loc>
     <lastmod>2024-05-08T19:53:38+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/distributed-computing-notes-1/</loc>
+    <loc>https://caoeuu.github.io/posts/distributed-computing-notes-1/</loc>
     <lastmod>2024-05-08T19:53:38+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nlp/</loc>
+    <loc>https://caoeuu.github.io/tags/nlp/</loc>
     <lastmod>2024-03-12T16:12:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/simple-insights-about-transformer-model/</loc>
+    <loc>https://caoeuu.github.io/posts/simple-insights-about-transformer-model/</loc>
     <lastmod>2024-03-12T16:12:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/computer-vision/</loc>
+    <loc>https://caoeuu.github.io/tags/computer-vision/</loc>
     <lastmod>2024-03-10T15:48:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cs231n/</loc>
+    <loc>https://caoeuu.github.io/tags/cs231n/</loc>
     <lastmod>2024-03-10T15:48:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/lab-notes-for-cs231n-assignment-1-updating/</loc>
+    <loc>https://caoeuu.github.io/posts/lab-notes-for-cs231n-assignment-1-updating/</loc>
     <lastmod>2024-03-10T15:48:40+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://caoeuu.github.io/</loc>
     <lastmod>2024-02-20T10:39:47+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/basics-of-mixture-cure-model/</loc>
+    <loc>https://caoeuu.github.io/posts/basics-of-mixture-cure-model/</loc>
     <lastmod>2024-02-16T21:12:30+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/loading/</loc>
+    <loc>https://caoeuu.github.io/posts/loading/</loc>
     <lastmod>2024-02-03T14:36:04+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://caoeuu.github.io/categories/</loc>
   </url>
 </urlset>

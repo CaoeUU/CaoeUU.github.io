@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     
     <script type="application/ld+json">
 
@@ -18,7 +18,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "http:\/\/localhost:1313\/posts\/lab-notes-for-cs231n-assignment-1-updating\/" 
+    "@id": "https:\/\/caoeuu.github.io\/posts\/lab-notes-for-cs231n-assignment-1-updating\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -45,8 +45,8 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cs231n Labnotes1">
 <meta name="twitter:title" content="Cs231n Labnotes1">
-<meta property="og:url" content="http://localhost:1313/posts/lab-notes-for-cs231n-assignment-1-updating/">
-<meta property="twitter:url" content="http://localhost:1313/posts/lab-notes-for-cs231n-assignment-1-updating/">
+<meta property="og:url" content="https://caoeuu.github.io/posts/lab-notes-for-cs231n-assignment-1-updating/">
+<meta property="twitter:url" content="https://caoeuu.github.io/posts/lab-notes-for-cs231n-assignment-1-updating/">
 <meta property="og:site_name" content="Tiny Grassland">
 <meta property="og:description" content="
 I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll update the labnotes simultaneously here.">
@@ -86,12 +86,12 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
 
     <title>Cs231n Labnotes1</title>
 
-    <link rel="icon" href="http://localhost:1313/favicon.png">
+    <link rel="icon" href="https://caoeuu.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="http://localhost:1313/posts/lab-notes-for-cs231n-assignment-1-updating/">
+    <link rel="canonical" href="https://caoeuu.github.io/posts/lab-notes-for-cs231n-assignment-1-updating/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -99,7 +99,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
     
     
     
-    <link rel="stylesheet" href="http://localhost:1313/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    <link rel="stylesheet" href="https://caoeuu.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
     
     
 
@@ -115,7 +115,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
       <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="http://localhost:1313/" aria-label="Go to homepage">Tiny Grassland</a>
+    <a class="header-title-link" href="https://caoeuu.github.io/" aria-label="Go to homepage">Tiny Grassland</a>
   </div>
   
 </header>
@@ -127,7 +127,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="http://localhost:1313/" title="Home">
+      <a class="sidebar-button-link " href="https://caoeuu.github.io/" title="Home">
     
       <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
       
@@ -137,7 +137,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="http://localhost:1313/posts/" title="Posts">
+      <a class="sidebar-button-link " href="https://caoeuu.github.io/posts/" title="Posts">
     
       <i class="sidebar-button-icon fas fa-lg fa-book" aria-hidden="true"></i>
       
@@ -147,7 +147,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="http://localhost:1313/about" title="About">
+      <a class="sidebar-button-link " href="https://caoeuu.github.io/about" title="About">
     
       <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
       
@@ -222,8 +222,8 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
 <p><strong>Broadcasting</strong></p>
 <p>An automatic adjustment when numpy dealing with two arrays that have seemingly unmatched dimensions.</p>
 <p>Below are two useful and legible pictures taken from the official website, which granted me great assitance to understand how it works.</p>
-<p><img src="http://localhost:1313/images/broadcasting-pic1.png" alt="Operation between matrix and vector"></p>
-<p><img src="http://localhost:1313/images/broadcasting-pic2.png" alt="Operation between two vectors"></p>
+<p><img src="https://caoeuu.github.io/images/broadcasting-pic1.png" alt="Operation between matrix and vector"></p>
+<p><img src="https://caoeuu.github.io/images/broadcasting-pic2.png" alt="Operation between two vectors"></p>
 <p>Something worth notice in the second pic is that when doing this computation, you are expected to transfer the left one from a row vector into a column vector. A little trick to realize it could be using <code>vector_a[:, np.newaxis]</code>.</p>
 <p>Actually, before acquiring knowledge about broadcasting, I thought about using matrix transformations to get the vector into the shape I wanted, but quickly I realized it might be impossible or quite complicated, so I gave up.</p>
 </li>
@@ -246,9 +246,9 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="http://localhost:1313/tags/cs231n/">cs231n</a>
+  <a class="tag tag--primary tag--small" href="https://caoeuu.github.io/tags/cs231n/">cs231n</a>
 
-  <a class="tag tag--primary tag--small" href="http://localhost:1313/tags/computer-vision/">computer vision</a>
+  <a class="tag tag--primary tag--small" href="https://caoeuu.github.io/tags/computer-vision/">computer vision</a>
 
                   </div>
                 
@@ -261,7 +261,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="NEXT: Simple Insights About Transformer Model">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caoeuu.github.io/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="NEXT: Simple Insights About Transformer Model">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -269,7 +269,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/basics-of-mixture-cure-model/" data-tooltip="Basics of Mixture Cure Model" aria-label="PREVIOUS: Basics of Mixture Cure Model">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caoeuu.github.io/posts/basics-of-mixture-cure-model/" data-tooltip="Basics of Mixture Cure Model" aria-label="PREVIOUS: Basics of Mixture Cure Model">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -335,7 +335,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="NEXT: Simple Insights About Transformer Model">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caoeuu.github.io/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="NEXT: Simple Insights About Transformer Model">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -343,7 +343,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/basics-of-mixture-cure-model/" data-tooltip="Basics of Mixture Cure Model" aria-label="PREVIOUS: Basics of Mixture Cure Model">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caoeuu.github.io/posts/basics-of-mixture-cure-model/" data-tooltip="Basics of Mixture Cure Model" aria-label="PREVIOUS: Basics of Mixture Cure Model">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -396,7 +396,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
     
   
     
-      <div id="cover" style="background-image:url('http://localhost:1313/images/background.jpg');"></div>
+      <div id="cover" style="background-image:url('https://caoeuu.github.io/images/background.jpg');"></div>
     
   
 
@@ -407,7 +407,7 @@ I&rsquo;m recently working on cs231n. This is the github link and I&rsquo;ll upd
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="http://localhost:1313/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+<script src="https://caoeuu.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
 

@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tiny Grassland</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://caoeuu.github.io/tags/</link>
     <description>Recent content in Tags on Tiny Grassland</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 May 2024 19:53:38 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://caoeuu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS Notes</title>
-      <link>http://localhost:1313/tags/cs-notes/</link>
+      <link>https://caoeuu.github.io/tags/cs-notes/</link>
       <pubDate>Wed, 08 May 2024 19:53:38 +0800</pubDate>
-      <guid>http://localhost:1313/tags/cs-notes/</guid>
+      <guid>https://caoeuu.github.io/tags/cs-notes/</guid>
       <description></description>
     </item>
     <item>
       <title>Distributed Computing</title>
-      <link>http://localhost:1313/tags/distributed-computing/</link>
+      <link>https://caoeuu.github.io/tags/distributed-computing/</link>
       <pubDate>Wed, 08 May 2024 19:53:38 +0800</pubDate>
-      <guid>http://localhost:1313/tags/distributed-computing/</guid>
+      <guid>https://caoeuu.github.io/tags/distributed-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>NLP</title>
-      <link>http://localhost:1313/tags/nlp/</link>
+      <link>https://caoeuu.github.io/tags/nlp/</link>
       <pubDate>Tue, 12 Mar 2024 16:12:50 +0800</pubDate>
-      <guid>http://localhost:1313/tags/nlp/</guid>
+      <guid>https://caoeuu.github.io/tags/nlp/</guid>
       <description></description>
     </item>
     <item>
       <title>Computer Vision</title>
-      <link>http://localhost:1313/tags/computer-vision/</link>
+      <link>https://caoeuu.github.io/tags/computer-vision/</link>
       <pubDate>Sun, 10 Mar 2024 15:48:40 +0800</pubDate>
-      <guid>http://localhost:1313/tags/computer-vision/</guid>
+      <guid>https://caoeuu.github.io/tags/computer-vision/</guid>
       <description></description>
     </item>
     <item>
       <title>Cs231n</title>
-      <link>http://localhost:1313/tags/cs231n/</link>
+      <link>https://caoeuu.github.io/tags/cs231n/</link>
       <pubDate>Sun, 10 Mar 2024 15:48:40 +0800</pubDate>
-      <guid>http://localhost:1313/tags/cs231n/</guid>
+      <guid>https://caoeuu.github.io/tags/cs231n/</guid>
       <description></description>
     </item>
   </channel>

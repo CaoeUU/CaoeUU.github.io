@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     
     <script type="application/ld+json">
 
@@ -18,7 +18,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "http:\/\/localhost:1313\/posts\/distributed-computing-notes-1\/" 
+    "@id": "https:\/\/caoeuu.github.io\/posts\/distributed-computing-notes-1\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -45,8 +45,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="分布式计算整理-1">
 <meta name="twitter:title" content="分布式计算整理-1">
-<meta property="og:url" content="http://localhost:1313/posts/distributed-computing-notes-1/">
-<meta property="twitter:url" content="http://localhost:1313/posts/distributed-computing-notes-1/">
+<meta property="og:url" content="https://caoeuu.github.io/posts/distributed-computing-notes-1/">
+<meta property="twitter:url" content="https://caoeuu.github.io/posts/distributed-computing-notes-1/">
 <meta property="og:site_name" content="Tiny Grassland">
 <meta property="og:description" content="
 该笔记整理是基于邱怡轩老师在2024春季面向本科生开设的分布式计算课程的课堂讲解和讲义，整理的目的是巩固并加深本人对相关内容的理解，同时让读者在相对更短的时间内对该课程的关键内容有较为全面的概览。">
@@ -86,12 +86,12 @@
 
     <title>分布式计算整理-1</title>
 
-    <link rel="icon" href="http://localhost:1313/favicon.png">
+    <link rel="icon" href="https://caoeuu.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="http://localhost:1313/posts/distributed-computing-notes-1/">
+    <link rel="canonical" href="https://caoeuu.github.io/posts/distributed-computing-notes-1/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -99,7 +99,7 @@
     
     
     
-    <link rel="stylesheet" href="http://localhost:1313/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    <link rel="stylesheet" href="https://caoeuu.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
     
     
 
@@ -115,7 +115,7 @@
       <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="http://localhost:1313/" aria-label="Go to homepage">Tiny Grassland</a>
+    <a class="header-title-link" href="https://caoeuu.github.io/" aria-label="Go to homepage">Tiny Grassland</a>
   </div>
   
 </header>
@@ -127,7 +127,7 @@
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="http://localhost:1313/" title="Home">
+      <a class="sidebar-button-link " href="https://caoeuu.github.io/" title="Home">
     
       <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
       
@@ -137,7 +137,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="http://localhost:1313/posts/" title="Posts">
+      <a class="sidebar-button-link " href="https://caoeuu.github.io/posts/" title="Posts">
     
       <i class="sidebar-button-icon fas fa-lg fa-book" aria-hidden="true"></i>
       
@@ -147,7 +147,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="http://localhost:1313/about" title="About">
+      <a class="sidebar-button-link " href="https://caoeuu.github.io/about" title="About">
     
       <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
       
@@ -253,7 +253,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
 <p>例3：按给定概率抽样</p>
 <p>$w=(a_1,\dots,a_n)$，$v=(v_1,\dots,v_n)$，以 $\frac{a_i}{\sum_j a_j}$ 的概率抽取$v_i$。</p>
 <p>算法伪代码如下：
-<a href="http://localhost:1313/images/sampling-algorithm.png">!sampling-algorithm</a></p>
+<a href="https://caoeuu.github.io/images/sampling-algorithm.png">!sampling-algorithm</a></p>
 <p>证明思路：</p>
 <ul>
 <li>若最终取样结果为$v_k$，则需保证第k步迭代时成功取到$a_k$，且其后要保持这一取样不变，而不论此前所取样本。因此，该算法所取的样本$v_{i^*} = v_k$的概率为：</li>
@@ -357,9 +357,9 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="http://localhost:1313/tags/distributed-computing/">Distributed Computing</a>
+  <a class="tag tag--primary tag--small" href="https://caoeuu.github.io/tags/distributed-computing/">Distributed Computing</a>
 
-  <a class="tag tag--primary tag--small" href="http://localhost:1313/tags/cs-notes/">CS Notes</a>
+  <a class="tag tag--primary tag--small" href="https://caoeuu.github.io/tags/cs-notes/">CS Notes</a>
 
                   </div>
                 
@@ -372,7 +372,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/to-mino-liu/" data-tooltip="To Mino Liu" aria-label="NEXT: To Mino Liu">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -380,7 +380,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="PREVIOUS: Simple Insights About Transformer Model">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caoeuu.github.io/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="PREVIOUS: Simple Insights About Transformer Model">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -446,7 +446,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/to-mino-liu/" data-tooltip="To Mino Liu" aria-label="NEXT: To Mino Liu">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -454,7 +454,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:1313/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="PREVIOUS: Simple Insights About Transformer Model">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caoeuu.github.io/posts/simple-insights-about-transformer-model/" data-tooltip="Simple Insights About Transformer Model" aria-label="PREVIOUS: Simple Insights About Transformer Model">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -507,7 +507,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
     
   
     
-      <div id="cover" style="background-image:url('http://localhost:1313/images/background.jpg');"></div>
+      <div id="cover" style="background-image:url('https://caoeuu.github.io/images/background.jpg');"></div>
     
   
 
@@ -518,7 +518,7 @@ $$S = \frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2 = \frac{1}{n-1}(\sum_{i=1}^{n}X
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="http://localhost:1313/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+<script src="https://caoeuu.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
 
