@@ -78,7 +78,7 @@ googleAnalytics = "G-PEDMYR1V0K"
   [segments.core]
     [[segments.core.includes]]
       # Debug core pages
-      path = '{/,/docs,/docs/**,/samples,/samples/**}'
+      path = '{/,/docs,/docs/**}'
   [segments.en_only]
     [[segments.en_only.includes]]
       # Alternatively, you can use environment variable
