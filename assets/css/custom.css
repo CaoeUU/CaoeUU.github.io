@@ -1,0 +1,302 @@
+/* Responsive History Timeline - 原版 (https://codepen.io/microfront/pen/veagoK) */
+/* 铺满整页左右，无页边距 */
+.timeline-carousel {
+  --tch-main: #b38c52;
+  --tch-white: rgba(255, 255, 255, 1);
+  --tch-white-20: rgba(255, 255, 255, 0.2);
+  --tch-white-60: rgba(255, 255, 255, 0.6);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 86px 2rem 90px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-carousel::after,
+.timeline-carousel::before {
+  display: none;
+}
+
+.timeline-carousel .slick-list { overflow: visible; }
+.timeline-carousel .slick-dots { bottom: -73px; }
+
+/* 左右翻页按钮 - 乳白色描边圆形，半透明黑底，悬停乳白底黑字 */
+.timeline-carousel {
+  --tch-cream: #e8e4d9;
+}
+.timeline-carousel__nav {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--tch-cream);
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--tch-cream);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+/* SVG 箭头：viewBox 24x24 对称，几何中心对齐 */
+.timeline-carousel__nav svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+.timeline-carousel__nav:hover {
+  background: var(--tch-cream);
+  color: #1d1d1e;
+  border-color: var(--tch-cream);
+}
+.timeline-carousel__nav.slick-prev { left: 0.5rem; }
+.timeline-carousel__nav.slick-next { right: 0.5rem; }
+.timeline-carousel__nav.slick-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.timeline-carousel__title {
+  color: var(--tch-white);
+  font-size: 46px;
+  line-height: 50px;
+  margin-bottom: 40px;
+  font-weight: 900;
+}
+
+.timeline-carousel__image { padding-right: 30px; }
+.timeline-carousel__item { cursor: pointer; }
+
+.timeline-carousel__item .media-wrapper {
+  opacity: 0.4;
+  padding-bottom: 71.4%;
+  transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.timeline-carousel__item:last-child .timeline-carousel__item-inner::after {
+  width: calc(100% - 30px);
+}
+
+.timeline-carousel__item-inner {
+  position: relative;
+  padding-top: 45px;
+}
+
+.timeline-carousel__item-inner::after {
+  position: absolute;
+  width: 100%;
+  top: 45px;
+  left: 0;
+  content: "";
+  border-bottom: 1px solid var(--tch-white-20);
+}
+
+.timeline-carousel__item-inner .year {
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--tch-white);
+  display: table;
+  letter-spacing: -1px;
+  padding-right: 10px;
+  background-color: #1d1d1e;
+  z-index: 1;
+  position: relative;
+  margin: -15px 0 20px;
+  font-weight: 900;
+}
+
+.timeline-carousel__item-inner .year::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -10px;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #1d1d1e;
+  z-index: 3;
+}
+
+.timeline-carousel__item-inner .month {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--tch-main);
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.timeline-carousel__desc {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--tch-white);
+  width: 60%;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.timeline-carousel .slick-active .media-wrapper { opacity: 1 !important; }
+
+.timeline-carousel .slick-dots {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-carousel .slick-dots li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 6px;
+  width: 10px;
+  height: 10px;
+}
+
+.timeline-carousel .slick-dots li.slick-active button {
+  background: var(--tch-main) !important;
+  border-color: var(--tch-main) !important;
+}
+
+.timeline-carousel .slick-dots li button {
+  display: block;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background: var(--tch-white-60) !important;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.timeline-carousel .slick-dots li button:hover {
+  background: var(--tch-main) !important;
+}
+
+/* 方案 B shortcode (demoB 页面用) */
+.timeline-horz-wrapper {
+  --timeline-line: rgb(var(--color-secondary-500));
+  --timeline-dot: rgb(var(--color-secondary-400));
+  --timeline-card-bg: transparent;
+  --timeline-card-border: rgb(var(--color-secondary-500) / 0.25);
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1.5rem 0 2rem;
+  margin: 0 -0.5rem;
+}
+
+.timeline-horz-track {
+  display: flex;
+  gap: 2rem;
+  padding: 0 0.5rem;
+  min-width: min-content;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+/* 香槟色横线 - 位于照片下方，穿过圆点中心 */
+.timeline-horz-track::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 2.05rem;
+  height: 1px;
+  background: var(--timeline-line);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.timeline-horz-item {
+  flex: 0 0 560px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* 圆点 + 日期容器 - 圆点叠在横线上方 */
+.timeline-horz-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.75rem;
+  position: relative;
+}
+
+/* 香槟色圆点 - 叠在横线上方，与线条对齐 */
+.timeline-horz-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--timeline-dot);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  margin-top: -1px;
+}
+
+/* 日期 - 圆点下方 */
+.timeline-horz-date {
+  font-size: 0.875rem;
+  color: rgb(var(--color-secondary-300));
+  font-weight: 500;
+  margin-top: 0.375rem;
+}
+
+.timeline-horz-card {
+  width: 100%;
+  background: var(--timeline-card-bg);
+  border: 1px solid var(--timeline-card-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.timeline-horz-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin: 0 0 0.75rem;
+  background: transparent;
+}
+
+.timeline-horz-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-horz-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(var(--color-neutral-100));
+  margin: 0 0 0.5rem;
+}
+
+.timeline-horz-desc {
+  font-size: 0.875rem;
+  color: rgb(var(--color-neutral-400));
+  margin: 0;
+  line-height: 1.4;
+}
+

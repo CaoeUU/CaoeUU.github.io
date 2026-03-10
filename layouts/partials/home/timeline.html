@@ -1,0 +1,54 @@
+{{/* Responsive History Timeline - 原版 (https://codepen.io/microfront/pen/veagoK) */}}
+{{ with site.Data.homepage_timeline }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<section class="timeline-carousel">
+  <h1 class="timeline-carousel__title">运动队成长记录</h1>
+  <div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
+    {{ range . }}
+    <div class="timeline-carousel__item">
+      <div class="timeline-carousel__image">
+        <div class="media-wrapper media-wrapper--overlay" style="background: url('{{ .image }}') center center; background-size:cover;"></div>
+      </div>
+      <div class="timeline-carousel__item-inner">
+        <span class="year">{{ .date }}</span>
+        <span class="month">{{ .title }}</span>
+        <p class="timeline-carousel__desc">{{ .desc }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+(function() {
+  if (typeof jQuery === 'undefined') return;
+  var $ = jQuery;
+  var init = function() {
+    var $el = $('[data-js="timeline-carousel"]');
+    if ($el.length && $.fn.slick) {
+      $el.slick({
+        infinite: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev timeline-carousel__nav" aria-label="上一组"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next timeline-carousel__nav" aria-label="下一组"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>',
+        dots: true,
+        autoplay: false,
+        speed: 1100,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [{
+          breakpoint: 800,
+          settings: { slidesToShow: 1, slidesToScroll: 1 }
+        }]
+      });
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+{{ end }}
