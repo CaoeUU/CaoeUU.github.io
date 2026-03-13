@@ -340,3 +340,19 @@ body.dark {
   line-height: 1.4;
 }
 
+/* 队员头像悬停：放大 + 金色描边，确保远程部署生效 */
+.team-avatar-row .team-avatar-item {
+  display: inline-block;
+  padding: 2px;
+}
+.team-avatar-row .team-avatar-img {
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@media (hover: hover) {
+  .team-avatar-row .team-avatar-item:hover .team-avatar-img {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px rgb(var(--color-primary-500));
+  }
+}
+

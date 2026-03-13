@@ -1,10 +1,10 @@
-{{/* 8 个队员小头像，样式与 contributors 完全一致，无链接 */}}
+{{/* 8 个队员小头像，样式与 contributors 完全一致，无链接；悬停边框用 custom.css 确保远程生效 */}}
 {{ with site.Data.team_avatars }}
-<div class="flex flex-wrap justify-center gap-3 mt-3 mb-2">
+<div class="flex flex-wrap justify-center gap-3 mt-3 mb-2 team-avatar-row">
   {{ range . }}
-    <span class="group" title="{{ .name | default "队员" }}">
+    <span class="group team-avatar-item" title="{{ .name | default "队员" }}">
       <img
-        class="nozoom h-10 w-10 rounded-full transition-all group-hover:scale-110 group-hover:ring-2 group-hover:ring-primary-500 object-cover"
+        class="nozoom h-10 w-10 rounded-full transition-all object-cover team-avatar-img"
         src="{{ .image }}"
         alt="{{ .name | default "队员" }}"
         width="40"
