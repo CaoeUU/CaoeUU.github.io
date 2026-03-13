@@ -4,10 +4,11 @@
   {{ $favicon32 := $logo.Fill "32x32" }}
   {{ $favicon16 := $logo.Fill "16x16" }}
   {{ $appleTouch := $logo.Fill "180x180" }}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ $appleTouch.RelPermalink }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32.RelPermalink }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16.RelPermalink }}">
-  <link rel="icon" href="{{ $favicon32.RelPermalink }}">
+  {{ $cacheBust := now.Unix }}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ $appleTouch.RelPermalink }}?v={{ $cacheBust }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32.RelPermalink }}?v={{ $cacheBust }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16.RelPermalink }}?v={{ $cacheBust }}">
+  <link rel="icon" href="{{ $favicon32.RelPermalink }}?v={{ $cacheBust }}">
   <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 {{ else }}
   {{/* 若 logo 未找到，使用默认 favicon */}}
