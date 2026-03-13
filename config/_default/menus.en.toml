@@ -16,15 +16,6 @@
   weight = 10
 
 [[main]]
-  name = "Shortcodes"
-  pageRef = "docs/shortcodes"
-  weight = 15
-
-[[main]]
-  name = "Examples"
-  weight = 20
-
-[[main]]
   name = "Samples"
   parent = "Examples"
   pageRef = "samples"
@@ -60,22 +51,11 @@
   weight = 90
 
 [[main]]
-  name = "Merch"
-  url = "https://www.teepublic.com/user/blowfish-store/t-shirts"
-  weight = 100
-
-#[[main]]
 #  name = "Test"
 #  pageRef = "pagTest"
 #  weight = 1000
 
 [[main]]
-  identifier = "twitter"
-  pre = "x-twitter"
-  url = "https://twitter.com/burufugu"
-  weight = 200
-
-#[[main]]
 #  identifier = "mastodon"
 #  pre = "mastodon"
 #  weight = 300
@@ -84,7 +64,7 @@
 [[main]]
   identifier = "github"
   pre = "github"
-  url = "https://github.com/nunocoracao/blowfish"
+  url = "https://github.com/CaoeUU"
   weight = 400
 
 

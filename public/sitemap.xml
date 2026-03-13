@@ -2,63 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>http://localhost:1313/en/sitemap.xml</loc>
-    
-      <lastmod>2024-01-15T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/fr/sitemap.xml</loc>
+    <loc>https://caoeuu.github.io/en/sitemap.xml</loc>
     
       <lastmod>2023-10-02T00:00:00+00:00</lastmod>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/de/sitemap.xml</loc>
-    
-      <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/it/sitemap.xml</loc>
-    
-      <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/pt-pt/sitemap.xml</loc>
-    
-      <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/es/sitemap.xml</loc>
-    
-      <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/pt-br/sitemap.xml</loc>
-    
-      <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/ja/sitemap.xml</loc>
-    
-      <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/zh-cn/sitemap.xml</loc>
+    <loc>https://caoeuu.github.io/zh-cn/sitemap.xml</loc>
     
       <lastmod>2023-10-02T00:00:00+00:00</lastmod>
     

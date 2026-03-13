@@ -1,62 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Blowfish</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Blowfish</description>
+    <title>Tags on Caoeuu</title>
+    <link>https://caoeuu.github.io/tags/</link>
+    <description>Recent content in Tags on Caoeuu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>nuno@n9o.xyz (Blowfish)</managingEditor>
-    <webMaster>nuno@n9o.xyz (Blowfish)</webMaster>
-    <copyright>© 2026 Blowfish</copyright>
-    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Carousel</title>
-      <link>http://localhost:1313/tags/carousel/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <author>nuno@n9o.xyz (Blowfish)</author>
-      <guid>http://localhost:1313/tags/carousel/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Demo</title>
-      <link>http://localhost:1313/tags/demo/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <author>nuno@n9o.xyz (Blowfish)</author>
-      <guid>http://localhost:1313/tags/demo/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Shortcode</title>
-      <link>http://localhost:1313/tags/shortcode/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <author>nuno@n9o.xyz (Blowfish)</author>
-      <guid>http://localhost:1313/tags/shortcode/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Timeline</title>
-      <link>http://localhost:1313/tags/timeline/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <author>nuno@n9o.xyz (Blowfish)</author>
-      <guid>http://localhost:1313/tags/timeline/</guid>
-      <description></description>
-      
-    </item>
+    <managingEditor>nuno@n9o.xyz (Xiaocao)</managingEditor>
+    <webMaster>nuno@n9o.xyz (Xiaocao)</webMaster>
+    <copyright>© 2026 Xiaocao</copyright>
+    <atom:link href="https://caoeuu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Advanced</title>
-      <link>http://localhost:1313/tags/advanced/</link>
+      <link>https://caoeuu.github.io/tags/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>nuno@n9o.xyz (Blowfish)</author>
-      <guid>http://localhost:1313/tags/advanced/</guid>
+      <author>nuno@n9o.xyz (Xiaocao)</author>
+      <guid>https://caoeuu.github.io/tags/advanced/</guid>
       <description>&lt;p&gt;This is the advanced tag. Just like other listing pages in Blowfish, you can add custom content to individual taxonomy terms and it will be displayed at the top of the term listing. &amp;#x1f680;&lt;/p&gt;</description>
       
     </item>

@@ -1,6 +1,6 @@
 ---
-title: "Welcome to Blowfish"
-description: "A powerful, lightweight theme for Hugo."
+title: "Welcome"
+description: "Me and My Jumpjump Team"
 ---
 
-Welcome! This is the Blowfish theme sample site.
+Welcome and have a look around!

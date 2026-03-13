@@ -1,23 +1,20 @@
 languageCode = "ja"
 languageName = "日本語"
 weight = 8
-title = "Blowfish"
+title = "Caoeuu"
 
 [params]
   displayName = "日本語"
   isoCode = "ja"
   rtl = false
   dateFormat = "2006-01-02"
-  logo = "img/blowfish_logo_transparent.png"
-  description = "強力で、軽量な Hugo のテーマです。"
+  logo = "img/logo.png"
+  description = "Me and My Jumpjump Team"
 
 [params.author]
-  name = "Blowfish"
+  name = "Xiaocao"
   email = "nuno@n9o.xyz"
-  image = "img/blowfish_logo.png"
-  headline = "強力で、軽量な Hugo のテーマです。"
-  bio = "強力で、軽量な Hugo のテーマです。"
-  links = [
-    { x-twitter = "https://twitter.com/burufugu" },
-    { github = "https://github.com/nunocoracao/blowfish" },
-  ]
+  image = "images/avatar.jpg"
+  headline = "Me and My Jumpjump Team"
+  bio = "Me and My Jumpjump Team"
+  links = []
