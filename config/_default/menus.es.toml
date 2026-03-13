@@ -7,28 +7,6 @@
   weight = 10
 
 [[main]]
-  name = "Ejemplos"
-  weight = 20
-
-[[main]]
-  name = "Muestras"
-  parent = "Ejemplos"
-  pageRef = "samples"
-  weight = 16
-
-[[main]]
-  name = "Galería"
-  parent = "Ejemplos"
-  pageRef = "examples"
-  weight = 30
-
-[[main]]
-  name = "Recetas"
-  parent = "Ejemplos"
-  pageRef = "guides"
-  weight = 40
-
-[[main]]
   name = "Usuarios"
   pageRef = "users"
   weight = 90

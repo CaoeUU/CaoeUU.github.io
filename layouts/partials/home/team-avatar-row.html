@@ -1,0 +1,17 @@
+{{/* 8 个队员小头像，样式与 contributors 完全一致，无链接 */}}
+{{ with site.Data.team_avatars }}
+<div class="flex flex-wrap justify-center gap-3 mt-3 mb-2">
+  {{ range . }}
+    <span class="group" title="{{ .name | default "队员" }}">
+      <img
+        class="nozoom h-10 w-10 rounded-full transition-all group-hover:scale-110 group-hover:ring-2 group-hover:ring-primary-500 object-cover"
+        src="{{ .image }}"
+        alt="{{ .name | default "队员" }}"
+        width="40"
+        height="40"
+        loading="lazy"
+        onerror="this.src='https://ui-avatars.com/api/?name={{ urlquery ( .name | default "?" ) }}&size=80&background=e8e4d9&color=8a8478'">
+    </span>
+  {{ end }}
+</div>
+{{ end }}

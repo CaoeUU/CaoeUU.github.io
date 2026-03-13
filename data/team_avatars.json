@@ -1,0 +1,10 @@
+[
+  { "image": "/images/team1.jpg", "name": "队员1" },
+  { "image": "/images/team2.jpg", "name": "队员2" },
+  { "image": "/images/team3.jpg", "name": "队员3" },
+  { "image": "/images/team4.jpg", "name": "队员4" },
+  { "image": "/images/team5.jpg", "name": "队员5" },
+  { "image": "/images/team6.jpg", "name": "队员6" },
+  { "image": "/images/team7.jpg", "name": "队员7" },
+  { "image": "/images/team8.jpg", "name": "队员8" }
+]

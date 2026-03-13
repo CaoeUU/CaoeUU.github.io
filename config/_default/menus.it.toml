@@ -16,28 +16,6 @@
   weight = 10
 
 [[main]]
-  name = "Esempi"
-  weight = 20
-
-[[main]]
-  name = "Campioni"
-  parent = "Esempi"
-  pageRef = "samples"
-  weight = 16
-
-[[main]]
-  name = "Vetrina"
-  parent = "Esempi"
-  pageRef = "examples"
-  weight = 30
-
-[[main]]
-  name = "Ricette"
-  parent = "Esempi"
-  pageRef = "guides"
-  weight = 40
-
-[[main]]
   name = "Utenti"
   pageRef = "users"
   weight = 90
