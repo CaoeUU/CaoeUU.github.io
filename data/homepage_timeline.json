@@ -1,32 +1,69 @@
 [
   {
-    "date": "2024-01",
-    "title": "组队",
-    "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400",
-    "desc": "跳绳队正式成立，首批 12 名队员加入"
+    "date": "2021-09",
+    "title": "Where the story begins",
+    "image": "/images/timeline/2021-09.jpg",
+    "desc": "Following the formation of our new team at SUFE, 12 new members joined, many of whom were still getting to know one another."
   },
   {
-    "date": "2024-03",
-    "title": "首次训练",
-    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400",
-    "desc": "在体育馆开展系统训练"
+    "date": "2021-12",
+    "title": "First Competition",
+    "image": "/images/timeline/2021-12.jpg",
+    "desc": "Fully prepared for nearly 3 months and won the silver medal."
   },
   {
-    "date": "2024-06",
-    "title": "市运会夺冠",
-    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400",
-    "desc": "团体花样跳绳一等奖"
+    "date": "2022-03",
+    "title": "Peer-monitoring when lockdown",
+    "image": "/images/timeline/2022-03.jpg",
+    "desc": "Spontaneously trained by ourselves to maintain our skills."
   },
   {
-    "date": "2024-09",
-    "title": "新队员迎新",
-    "image": "https://images.unsplash.com/photo-1518611012118-696084aa547a?w=400",
-    "desc": "招新后队伍扩充至 24 人"
+    "date": "2022-12",
+    "title": "The Annual Rundown",
+    "image": "/images/timeline/2022-12.jpg",
+    "desc": "After a year of rigorous training, our efforts paid off with gold, silver, and bronze medals across various events."
+  },
+  {
+    "date": "2023-03",
+    "title": "Tianjin talent show",
+    "image": "/images/timeline/2023-3.jpg",
+    "desc": "Our team was invited to showcase our skills on a Tianjin Television talent show."
+  },
+  {
+    "date": "2023-05",
+    "title": "Open Ceremony of the Basketball Tournament",
+    "image": "/images/timeline/2023-05.jpg",
+    "desc": "We were invited to perform at the opening ceremony of the varsity basketball tournament."
+  },
+  {
+    "date": "2023-11",
+    "title": "New city unlocked by us together",
+    "image": "/images/timeline/2023-11.jpg",
+    "desc": "We took a three-hour bus journey to Zhejiang, marking our first time competing away from home."
+  },
+  {
+    "date": "2024-11",
+    "title": "Competition in Hainan",
+    "image": "/images/timeline/2024-11.jpg",
+    "desc": "Thousands miles away from school. Btw, funding for a trip like this is hard to come by, but our coach truly believed in our potential and went above and beyond to get us here."
   },
   {
     "date": "2024-12",
-    "title": "年终汇演",
-    "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400",
-    "desc": "校内汇报演出圆满收官"
+    "title": "The National Championship",
+    "image": "/images/timeline/2024-12.jpg",
+    "desc": "Highest level of competition we've ever participated in. We were up against seriously elite competition here."
+  },
+  {
+    "date": "2025-05",
+    "title": "Graduation Trip",
+    "image": "/images/timeline/2025-05.jpg",
+    "desc": "We took a 7-day road trip through Xinjiang all together, covering 1,500 km on a self-driving journey that was as challenging as it was breathtaking."
+  },
+  {
+    "date": "2025-06",
+    "title": "Graduation",
+    "image": "/images/timeline/2025-06.jpg",
+    "desc": "It's an intermission, but not the final curtain. Our friendship continues beyond graduation, and we'll always be a family."
   }
+
 ]

@@ -1,8 +1,10 @@
-{{/* example of extend-footer */}}
-{{/*
-<p class="text-sm text-neutral-500 dark:text-neutral-400">
-  <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" rel="me" href="https://masto.ai/@blowfish">
-    Follow me on Mastodon
-  </a>
-</p>
-*/}}
+{{/* Visitor count (不蒜子) */}}
+{{ if .Site.Params.footer.showVisitorCount | default false }}
+<div class="mt-4 pt-4 border-t border-neutral-200 dark:border-neutral-700">
+  <p class="text-sm text-neutral-500 dark:text-neutral-400">
+    {{ i18n "footer.visits" }}: <span id="busuanzi_site_pv">0</span>
+    {{ i18n "footer.visitors" }}: <span id="busuanzi_site_uv">0</span>
+  </p>
+  <script async src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+</div>
+{{ end }}
