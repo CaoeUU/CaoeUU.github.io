@@ -4,7 +4,7 @@
 <section class="timeline-carousel">
   <h1 class="timeline-carousel__title">Jumpjump Trajectory</h1>
   <div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
-    {{ range . }}
+    {{ range (reverse .) }}
     <div class="timeline-carousel__item">
       <div class="timeline-carousel__image">
         <div class="media-wrapper media-wrapper--overlay" style="background: url('{{ .image }}') center center; background-size:cover;"></div>
