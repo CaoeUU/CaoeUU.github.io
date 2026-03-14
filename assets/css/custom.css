@@ -340,7 +340,21 @@ body.dark {
   line-height: 1.4;
 }
 
-/* 队员头像悬停：放大 + 金色描边，确保远程部署生效 */
+/* 队员头像：移动端两排每排四个，桌面端一排八个 */
+.team-avatar-row {
+  display: grid;
+  grid-template-columns: repeat(4, 44px);
+  gap: 0.75rem;
+  justify-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .team-avatar-row {
+    grid-template-columns: repeat(8, 44px);
+  }
+}
 .team-avatar-row .team-avatar-item {
   display: inline-block;
   padding: 2px;
