@@ -5,7 +5,7 @@
 theme = "blowfish"
 baseURL = "https://caoeuu.github.io/"
 defaultContentLanguage = "en"
-disableLanguages = ["fr", "de", "it", "pt-pt", "pt-br", "es", "ja"] #to allow translation work requiring shipping to production
+disableLanguages = ["fr", "de", "it", "pt-pt", "pt-br", "es", "ja", "zh-cn"]
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
